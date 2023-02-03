@@ -1,0 +1,20 @@
+<main>
+	<header>
+		<img src="../assets/logo.jpg" alt="Jalopy Logo">Jalopy
+	</header><!--html multi-line comment-->
+	<section><!-- add the newly created component:housing-list it updates in the browser. $event, which here is an object of
+		type HousingLocation is provided by Angular when dealing with handlers in templates.
+		updateSelectedLocation is method in app components.ts-->
+		<app-housing-list [locationListInput]="housingLocationListInterface" (locationSelectedSearchItemEvent)="updateSelectedLocation($event)"></app-housing-list>
+	</section>
+	<article>
+		<ng-container *ngIf="selectedLocationObject">
+	<img [src] = "selectedLocationObject?.photo">
+	<p>{{selectedLocationObject?.name}}</p>
+	<p>{{selectedLocationObject?.plateNo}}</p>
+	<p>{{selectedLocationObject?.town}}, {{selectedLocationObject?.county}}</p>
+	<p>{{selectedLocationObject?.price}}</p>
+	<p>{{selectedLocationObject?.tradeIn ? "Trade ins Accepted" : "No Trade-ins"}}</p>
+	</ng-container>
+	</article>
+</main>

@@ -1,0 +1,48 @@
+input, button{
+border:solid 1px #555B6E;
+border-radius: 2px;
+display: inline-block;
+padding: 0;
+}
+
+input{
+width: 400px;
+height:30px;
+border-radius: 2px 0 0 2px;
+color:#888c9c;
+border: solid 1px #888c9c;
+padding: 0 5px 0 10px;
+}
+
+button{
+width:70px;
+height:32px;
+background-color: #4468e8;
+color: white;
+border: solid 1px #4468e8;
+border-radius: 0 2px 2px 0;
+}
+
+article{
+margin: 40px 0 10px 0;
+color: #202845;
+}
+
+article, article > p{
+color:#202845;
+}
+article > p:first-of-type{
+font-weight: bold;
+font-size: 13pt;
+}
+
+img{
+width:490px;
+border-radius:5pt;}
+
+label{
+display: block;
+font-size:10px;
+color:#888c9c;
+padding: 0 0 5px 0;
+}

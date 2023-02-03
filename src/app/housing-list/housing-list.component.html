@@ -1,0 +1,16 @@
+<label for="location-search">Search for a new Jalopy</label>
+<input id="location-search" placeholder="Ex: Mazda " #searchId>
+<button (click)="searchHousingLocations(searchId.value)">Search</button>
+<!-- locationListInput/ in updated version called results - which is based on >searchTextLocation< provided in the search bar
+is from the Typescript component for housing-list. Object locationItem reps an item.
+>selectHousingLocation()< is method, with parameter of >locationItem< is the item in results, which user has 
+searched and clicked to view details of the selected location-->
+
+<article *ngFor="let locationItem of results" (click)="selectHousingLocation(locationItem)">
+	<img [src] = "locationItem.photo" [alt]="locationItem.name">
+	<p>{{locationItem.name}}</p>
+	<p>{{locationItem.plateNo}}</p>
+	<p>{{locationItem.town}}, {{locationItem.county}}</p>
+	<p>{{locationItem.price}}</p>
+<button (click)="selectHousingLocation(locationItem)">View</button>
+</article>
